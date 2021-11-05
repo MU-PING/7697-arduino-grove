@@ -13,7 +13,8 @@
 * Grove LED
 
 ### 電路圖
-* LED 燈條是數位訊號輸出，可以接 D2/D3/D4/D10/D12 的 Grove Breakout 連接埠  
+> :warning: 軟體必須配合硬體的接法，下面Grove Breakout中有說明
+* LED 燈條是數位訊號輸出，可以接 D2/D3/D4/D10/D12 的 Grove Breakout 連接埠
  <img src="https://user-images.githubusercontent.com/93152909/140545284-620af49e-4693-4a10-a64b-092f20e864c6.png" width="400px">
 
 ### 範例圖
@@ -28,7 +29,7 @@
 
 ### Grove Breakout------------------------------------------------------------
 * 擴充版的一種，可以方便開發人員使用 Grove 元件
-* Grove 元件在連接時，需要注意 Pin 的位置，因為線是固定方向的插法，需要軟體配合硬體，例如：main.ino
+* :warning: Grove 元件在連接時，需要注意 Pin 的位置，因為線是固定方向的插法，需要軟體配合硬體，例如：main.ino
 ```C++
 Grove_LED_Bar _bar2(5, 4, 0); //Clock Pin, Data Pin, Orientation
 

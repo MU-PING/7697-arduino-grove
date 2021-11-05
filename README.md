@@ -11,7 +11,7 @@
 * LinkIt7697
 * Grove Breakout
 * Grove LED
-
+* 4Pin線
 ### 電路圖
 > :warning: 軟體必須配合硬體的接法，下面Grove Breakout中有說明
 * LED 燈條是數位訊號輸出，可以接 D2/D3/D4/D10/D12 的 Grove Breakout 連接埠

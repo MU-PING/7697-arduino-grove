@@ -11,7 +11,7 @@
 * LinkIt7697
 * Grove Breakout
 * Grove LED
-* 4Pin線
+* 4Pin 線
 ### 電路圖
 > :warning: 軟體必須配合硬體的接法，下面Grove Breakout中有說明
 * LED 燈條是數位訊號輸出，可以接 D2/D3/D4/D10/D12 的 Grove Breakout 連接埠
@@ -29,13 +29,19 @@
 
 ### Grove Breakout------------------------------------------------------------
 * 擴充版的一種，可以方便開發人員使用 Grove 元件
-* :warning: Grove 元件在連接時，需要注意 Pin 的位置，因為線是固定方向的插法，需要軟體配合硬體，例如：main.ino
+* :warning: Grove 元件在連接時，需要注意 Pin 的位置，因為 4Pin 線是固定方向的插法，**需要軟體配合硬體**，例如：main.ino
 ```C++
 Grove_LED_Bar _bar2(5, 4, 0); //Clock Pin, Data Pin, Orientation
 
-// 其函式設定 P5 為 Clock Pin ； P4 為 Data Pin
+// 其函式設定 P5 為 clock Pin ； P4 為 data Pin
 // 而Grove_LED 上的 DI 是 data pin ; DCKI 是 clock pin
 // 所以接線時必須注意 P5 要接到 DCKI；P4 要接到 DI
+
+// 錯誤例子：
+// 如果寫成Grove_LED_Bar _bar2(4, 5, 0)
+// 表示我們設定P4 為 clock Pin ； P5 為 data Pin
+// 而Grove_LED 上的 DI 是 data pin ; DCKI 是 clock pin
+// 但 4Pin 線會將 P5 接到 DCKI；P4 接到 DI，程式便會錯誤
 ```
 
 * 7697插入擴充板時，請確認腳位
